@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">close;</a>
+    <a href="http://localhost:52240/Home/About">About Us</a>
+    <a href="https://registrar.byu.edu/advisement/pdf/14/322629.pdf">IS Map Sheet</a>
+    <a href="https://marriottschool.byu.edu/advisement/classes/transfer-info/">Transfer Student Information</a>
+    <a href="https://marriottschool.byu.edu/advisement/applying/info/">Application Information</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; More Info</span>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
+
+
+
+<div class="row">
+    <div class="col-md-2"> </div>
+    <div class="col-md-8">
+        <h2><b>BS Information Systems</b></h2>
+        <p>
+            Information systems professionals define, develop, and maintain the information system infrastructure that supports the operations of all businesses, governments, and other institutions. These professionals use a wide variety of skills in carrying out this function. The BSIS degree develops your ability to function effectively as a professional, applying state-of-the-art technology in solving business problems. You are trained in business and information systems and taught to understand complex business environments.
+            <br />
+            <br />
+            Built on a solid foundation of business courses, the curriculum advances your understanding of technologies in the design and development of information systems. You gain technical expertise in systems analysis; systems design and implementation; database development and management; programming; telecommunications (networking; 2-tier, 3-tier, and n-tier application development; and web application development.
+        </p>
+
+        <br />
+
+        <h3><b>Career Option</b></h3>
+        <p>The Information Systems program allows graduate to embrace opportunities in business analysis, consulting, reengineering, IS design, IS management, programming, instruction, and administration.</p>
+
+        <br />
+        <h3><b>Core Requirements</b></h3>
+        <p>Effective Fall 2015</p>
+        <br />
+        <p>Fall Semester</p>
+        <ul>
+            <li>IS 401 Systems Analysis</li>
+            <li>IS 402 Database Systems</li>
+            <li>IS 403 Principles of Business&nbsp;Programming</li>
+            <li>IS 414 Business Processes and Controls</li>
+        </ul>
+
+        <p>Winter Semester:</p>
+
+        <ul>
+            <li>IS 404 Data Communications</li>
+            <li>IS 405 Information Systems Project Management</li>
+            <li>IS 411 Systems Design &amp; Implementation</li>
+            <li>IS 413 Enterprise Application Development</li>
+        </ul>
+</div>
+    <div class="col-md-2"> </div>
+</div>

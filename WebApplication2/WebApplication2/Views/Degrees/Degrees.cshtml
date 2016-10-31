@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Degrees";
+}
+
+
+<nav class="breadcrumb">
+    <ol class="breadcrumb">
+        <!-- name, method, controller-->
+        <li class="breadcrumb-item">@Html.ActionLink("Home", "HOMES", "Home")</li>
+        <li class="breadcrumb-item">@Html.ActionLink("Degree", "DEGREE", "Home")</li>
+        <li class="breadcrumb-item active">@ViewBag.degreename</li>
+    </ol>
+</nav>
+
+<body>
+    <div id="page-wrap">
+        <!-- all websites HTML here -->
+
+
+        <p>
+            <br />
+       Degree Name: @ViewBag.degreename
+            <br />
+       Degree Coordinator: @ViewBag.degreecoordinator
+            <br />
+      Degree Title: @ViewBag.titles
+            <br />
+       Office Address: @ViewBag.officeaddress
+            <br />
+       PhD: @ViewBag.phd
+            <br />
+       Masters: @ViewBag.masters
+            <br />
+       Bachelors: @ViewBag.bachelors
+            <br />
+      Picture: @ViewBag.picture
+            <br />
+    </p>
+        <!--HTML action can only be used with text. use URL action when it's not text (button, picture)-->
+    <h1><font size=30"><b>FAQ</b></font></h1>
+
+
+    <h3>Why should I major in IS?</h3>
+        <p>IS graduates have 100% job placement!</p>
+
+
+        <a href="@Url.Action("FAQ1", "Degrees", new { FAQ = 1 }, null)"><button type="submit" class="btn btn-success">Respond to question</button></a>
+                
+        <!-- or this works too but only the text part
+        <button type="button" class="btn btn-default">
+            @Html.ActionLink("Respond", "FAQ1", "Degrees", new { FAQ = 2 }, null)
+        </button>-->
+      
+            <br />
+        <br />
+        
+            <h3>Is IS program challenging?</h3>
+            <p>Yes, you will have no life in junior core.</p>
+
+        <a href="@Url.Action("FAQ1", "Degrees", new { FAQ = 2 }, null)"><button type="submit" class="btn btn-success">Respond to question</button></a>
+
+
+            <br />
+            <br />
+            <h3>How are the professors? Are they cool?</h3>
+            <p>Yes, they are cool professors.</p>
+
+        <a href="@Url.Action("FAQ1", "Degrees", new { FAQ = 3 }, null)"><button type="submit" class="btn btn-success">Respond to question</button></a>
+
+
+            <br />
+            <br />
+
+            <h2>Can't find an answer to your question? Fill out the form below.</h2>
+            @using (Html.BeginForm())
+            {
+                <h5>First Name</h5>
+                @Html.TextBox("First Name");
+
+                <h5>Last Name</h5>
+                @Html.TextBox("Last Name");
+
+
+   <!--        <h5>Your Question</h5>-->
+                /*     @Html.TextBox("Question"); */
+
+                
+                
+                <h5>Your Question</h5>
+    <textarea rows="4" cols="100" maxlength="500" placeholder="Enter your Question here"></textarea>
+                <br />
+                <p><font size="1"><i> Limited 500 charaters</i></font></p>
+                <br />
+                <input type="submit" value="Submit">
+            }
+
+</div>
+</body>
